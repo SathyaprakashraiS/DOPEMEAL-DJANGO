@@ -27,7 +27,7 @@ SECRET_KEY = 'mfoqf%j74pkyvw6+bt%(__cp!^s@3j!@cq)e1npy#0==$a68dy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','dopemeal.herokuapp.com']
 
 
 # Application definition
@@ -84,6 +84,17 @@ DATABASES = {
     }
 }
 
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'dopemeal',
+#        'USER': 'postgres',
+#        'PASSWORD': 'a',
+#        'HOST': '127.0.0.1',
+#        'PORT': '5432',
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
