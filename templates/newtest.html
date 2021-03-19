@@ -1,0 +1,168 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>RESPONSE TEST</title>
+  </head>
+<body>
+<div class="grid-container">
+      <div class="item1">
+        <img src="./i1.png"/>
+        <div class="details">
+        <h1>HELLO</h1>
+        <p>text here++</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+        </div>
+      </div>
+  <div class="item2">
+  <img src="./i1.png"/>
+        <div class="details">
+        <h1>HELLO</h1>
+        <p>text here++</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+        </div>
+  </div>
+  <div class="item3">
+  <img src="./i1.png"/>
+        <div class="details">
+        <h1>HELLO</h1>
+        <p>text here++</p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+        </div>
+  </div>  
+</div>
+</body>
+
+</html>
+
+<style type="text/css">
+body{
+    background-color:black;
+}
+
+.grid-container {
+  display: grid;
+  width:100%;
+  height:auto;
+  grid-template-columns:auto auto auto;
+  margin-left:2%;
+  grid-gap: 10px;
+  background-color: #DD2288;
+  padding: 10px;
+}
+
+.grid-container > div{
+
+  background-color: #160816;
+  text-align: center;
+  width:600px;
+  height:800px;
+  padding: 20px 0;
+  font-size: 30px;
+  border:5px solid #ffeeff;
+}
+.item1 .details {
+    position: relative;
+    top:1;
+    height:600px;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.item2 .details {
+    position: relative;
+    top:1;
+    width:auto;
+    height:600px;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.item3 .details {
+   position: relative;
+    top:1;
+    width:auto;
+    height:600px;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.item1:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.item2:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.item3:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+
+@media screen and (max-width: 380px){
+.grid-container {
+   display: grid;
+   grid-template-columns: auto;
+   height:auto;
+   width:100%;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container > div {
+
+  text-align: center;
+  width:300px;
+  height:600px;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.item1 .details {
+    position: relative;
+    top:1;
+    height:400px;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.item2 .details {
+    position: relative;
+    top:1;
+    width:auto;
+    height:400px;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.item3 .details {
+   position: relative;
+    top:1;
+    width:auto;
+    height:400px;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+}
+
+</style>

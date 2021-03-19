@@ -1,0 +1,210 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>DOPE MEAL</title>
+  </head>
+  <body>
+
+  <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+  <!--NAV BAR-->
+ <nav class="navbar navbar-dark bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-light fixed-top">
+  <a class="navbar-brand" href="#"><h1 style="color:#79E460;" >DOPEMEAL</h1></a>
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+    <!--<span class="navbar-toggler-icon"><h style="color:#000000">MENU</h></span>-->
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color:#79E460;" href="/basic"><b>HOME</b><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color:#79E460;" href="/fo"><b>FOODS</b></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color:#79E460;" href="/result"><b>RESULT</b></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color:#79E460;" href="/comment"><b>REVIEW</b></a>
+      </li>
+      <!--<li class="nav-item ">
+        <a class="nav-link" href="/pybot">DOPE SEARCH</a>
+      </li>-->
+        <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/callcalcal"><b>YOUR DOPE FOOD</b></a>
+      </li>
+      
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+  
+
+  <div class="middle">
+    <form action="/pybot/" method="GET">
+      <div class="form-group">
+        <!--<label for="exampleInputEmail1" style="font-size: 2.5ch;text-align:center; padding-bottom: 1%;color:#FFFFFF;"><b>What's Your Query</b></label>-->
+        <h2 class="font" style="text-align:center;"><b>What's Your Query</b></h2>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Query" name="query">
+        </div>
+      <span style="text-align:center;"><button type="submit" class="btn btn-outline-danger" ><b>Search</b></button></span> 
+
+    </form>
+  
+{% if ans %}
+  <h4 style="text-align:center;color:#000000;font-size:150%"><b>Search Result for "{{query}}" </b></h4>
+  <p style="text-align:center;color:#FFFFFF">{{ans}}</p>
+{% endif %}
+</div>
+   <!-- </div>  -->
+  <nav class="navbar navbar-dark bg-light fixed-bottom">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-light fixed-bottom">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" >
+        <a class="nav-link" style="color:#79E460;" href="/dopestop"><b>DOPE STOP</b></a><!-- a place to list things to buy for kitchen and where to buy them  -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;"href="/book"><b>BOOKS</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#27B404;" href="/pybot"><b>DOPE SEARCH</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/aboutus"><b>ABOUT US</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/contactus"><b>CONTACT US</b></a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+
+</nav>
+</nav>
+
+    
+    <style type="text/css">
+   
+   body {
+          /*background-image: url('{% static "images/pybotback.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;>*/
+          /*background:#FFEE00;*/
+          background-image:url('{% static 'images/ds.jfif'%}');background-size:cover;
+       } 
+   #carousel{
+     padding :00px;
+    
+   }
+   .container{
+     padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+
+   }
+   .hello:hover{
+    color:red;
+}
+  
+   .middle
+   {
+    width:80%;
+    margin-left:10%;
+    margin-top:10%;
+    margin-bottom:30%;
+   }
+   .card{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-up:0px;
+    margin-down:0px;
+    background-color:#FF0000;
+    border-radius:0px;
+
+   } 
+   .font
+  {
+    font-size:150%;
+    color:#FFFFFF;
+    text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+  }
+  @media (max-width: 767.98px)
+   {
+    .font
+    {
+     font-size:50%;
+     color:#FFFFFF;
+    text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+    }
+   }
+   @media (max-width: 991.98px)
+   {
+    .font
+    {
+     font-size:40%;
+     color:#FFFFFF;
+     text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+    }
+   }
+   @media (max-width: 1199.98px)
+   {
+    .font
+    {
+     font-size:150%;
+     color:#FFFFFF;
+     text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+    }
+    .middle
+   {
+    width:100%;
+    margin-left:0%;
+    margin-top:30%;
+   }
+   }
+
+   
+    </style>  
+    
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      </body>  
+</html>
+    

@@ -1,0 +1,243 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>DOPE MEAL</title>
+  </head>
+  <body>
+  <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+  <!--NAV BAR-->
+ <nav class="navbar navbar-dark bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-light fixed-top">
+  <a class="navbar-brand" href="#"><h1 style="color:#79E460;" >DOPEMEAL</h1></a>
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+    <!--<span class="navbar-toggler-icon"><h style="color:#000000">MENU</h></span>-->
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color:#79E460;" href="/basic"><b>HOME</b><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color:#79E460;" href="/fo"><b>FOODS</b></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color:#27B404;" href="/result"><b>RESULT</b></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color:#79E460;" href="/comment"><b>REVIEW</b></a>
+      </li>
+      <!--<li class="nav-item ">
+        <a class="nav-link" href="/pybot">DOPE SEARCH</a>
+      </li>-->
+        <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/callcalcal"><b>YOUR DOPE FOOD</b></a>
+      </li>
+      
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+<br><br>
+<div class="summabreak">  
+<h2 style="text-align:center;">ENTER THE DETAILS</h2>
+</div>
+<div class="maincard">
+<form action="scheme">
+  {% csrf_token %}
+	<!-- <a class="navbar-brand "><h2 class="bg-dark"><p>ENTER THE DETAILS</p></h2></a> -->
+		<!--<div class="input-group mb-3 w-25">-->
+      <div class="input-group">
+    	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">HEIGHT</span>
+  	</div>
+  	<input type="text" name ="height" placeholder="enter in cm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+ 	 </div>
+    	<!--<div class="input-group mb-3 w-25">-->
+      <div class="input-group">
+    	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">WEIGHT</span>
+  	  </div>
+   	<input type="text" name ="weight" placeholder="enter in kg" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  	</div>
+	   <br>
+		<!--<div class="alert alert-danger w-50" role="alert">-->
+    <div class="alert alert-danger" role="alert">
+			<h3 style="text-align:center;"><b>NOTE</b></h3>
+    	
+      <p style="text-align:center;"><i>for number of meals 3 calories must be between 300 to 6900</i></p>
+    	<p style="text-align:center;"><i>for number of meals 4 calories must be between 400 to 9200</i></p>
+		</div>
+	
+	<!--<div class="input-group mb-3 w-25">-->
+    <div class="input-group">
+  	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">MEALS</span>
+  	</div>
+     	<input type="text" name ="meal" placeholder="3or4" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+	</div>
+	
+
+<!-- this place is where the amount of calory is asked this is going to be changed-->
+  
+
+
+  
+  <!--<div class="input-group mb-3 w-25">-->
+    <div class="input-group">
+  	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">CALORIES</span>
+  	</div>
+  	<input type="text" name ="cals" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+	</div>
+    <br>
+             <label><h2 style="color:#FFFFFF;"><b>Select your Breakfast type:</b></h2></label>
+             <select name="breakfast">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+             <label><h2 style="color:#FFFFFF;"><b>Select your Lunch type:</b></h2></label>
+             <select name="lunch">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+             <label><h2 style="color:#FFFFFF;"><b>Select your Snack type:</b></h2></label>
+             <select name="snack">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+             <label><h2 style="color:#FFFFFF;"><b>Select your Dinner type:</b></h2></label>
+             <select name="dinne">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+
+
+		<!--<div class="alert alert-danger w-25" role="alert">-->
+    <div class="alert alert-danger" role="alert">
+    	<h1 style="text-align:center;font-size:150%"><b>CHOOSE A STYLE OF FOOD TO TAKE</b></h1>
+      <br>
+      <i>
+      <p style="text-align:center;">1-ANYKIND OF FOOD</p>
+      <p style="text-align:center;">2-PALEO FOOD STYLE</p>
+      <p style="text-align:center;">3-VEGETARIAN FOOD STYLE</p>
+      <p style="text-align:center;">4-VEGAN FOOD STYLE</p>
+      <p style="text-align:center;">5-KETOGENIC FOOD STYLE</p>
+      <p style="text-align:center;">6-MEDITERRIAN FOOD STYLE</p>
+      <!--
+      <ol>
+        <li>ANYKIND OF FOOD</li>
+        <li>PALEO FOOD STYLE</li>
+        <li>VEGETARIAN FOOD STYLE</li>
+        <li>VEGAN FOOD STYLE</li>
+        <li>KETOGENIC FOOD STYLE</li>
+        <li>MEDITERRIAN FOOD STYLE</li>
+      </ol>
+      -->
+      </i>
+		</div>
+	<!--<div class="input-group mb-3 w-25">-->
+  <div class="input-group">
+  	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">SCHEME NO:</span>
+  	</div>
+  	<input type="text" name ="choices" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+	</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<br>
+<nav class="navbar navbar-dark bg-light">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-light">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+  </button>
+  <div class="collapse navbar-collapse"  id="navbarText">
+    
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" >
+        <a class="nav-link" style="color:#79E460;" href="/dopestop"><b>DOPE STOP</b></a><!-- a place to list things to buy for kitchen and where to buy them  -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;"href="/book"><b>BOOKS</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/pybot"><b>DOPE SEARCH</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/aboutus"><b>ABOUT US</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:#79E460;" href="/contactus"><b>CONTACT US</b></a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+
+</nav>
+</nav>
+<style type="text/css">
+   body
+   { 
+    /*background: #3FEE17 !important;*/
+    background-image: url('{% static 'images/bg2.jfif'%}');
+    background-size:cover;
+    /*filter: blur(8px);        code to blur 
+    -webkit-filter: blur(8px);*/
+    /*background:#FFFFFF;*/
+   } 
+   .maincard
+   {
+    margin-top:4%;
+    margin-bottom:1%;
+    padding-left:25%;
+    padding-right:25%;
+   }
+   .summabreak
+   {
+    margin-top:2%;
+   }
+   @media (max-width: 1199.98px) 
+   {
+    .summabreak
+    {
+      margin-top:10%;
+    }
+   }
+</style>            
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
