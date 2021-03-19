@@ -17,3 +17,4 @@ azure-storage_common==2.1.0
 azure-common==1.1.5
 azure-storage-blob==2.1.0
 django-allauth==0.44.0
+python-decouple==3.3
