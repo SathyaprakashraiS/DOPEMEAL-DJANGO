@@ -295,11 +295,32 @@ def schemeselection(request):
 
 def calcal(request):
 	n=request.GET['Foodname'];
+	n=n.upper()
+	#obj =Food.objects.all().filter(name=n)
 	obj =Food.objects.all().filter(name=n)
-	#return render(request,"calcalculated.html",{'obj':obj})
+	pal=Paleo.objects.all().filter(name=n)
+	veg=Vegetarian.objects.all().filter(name=n)
+	vag=Vegan.objects.all().filter(name=n)
+	ket=Ketogenic.objects.all().filter(name=n)
+	med=Mediterranean.objects.all().filter(name=n)
 	if((obj.exists())):
 		obj =Food.objects.all().filter(name=n)
 		return render(request,"calcalculated.html",{'obj':obj,'n':n})
+	if((pal.exists())):
+		pal=Paleo.objects.all().filter(name=n)
+		return render(request,"calcalculated.html",{'obj':pal,'n':n})
+	if((veg.exists())):
+		veg=Vegetarian.objects.all().filter(name=n)
+		return render(request,"calcalculated.html",{'obj':veg,'n':n})
+	if((vag.exists())):
+		vag=Vegan.objects.all().filter(name=n)
+		return render(request,"calcalculated.html",{'obj':vag,'n':n})
+	if((ket.exists())):
+		ket=Ketogenic.objects.all().filter(name=n)
+		return render(request,"calcalculated.html",{'obj':ket,'n':n})
+	if((med.exists())):
+		med=Mediterranean.objects.all().filter(name=n)
+		return render(request,"calcalculated.html",{'obj':med,'n':n})
 	else:
 		#obj ="ERROR"
 		return render(request,"calcalculatednone.html",)

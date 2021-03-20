@@ -60,13 +60,17 @@
 <!--<div class="fonts">
 <h1 style="text-align:center"><b>ABOUTUS</b></h1>
 </div>-->
+
+
 <div class="about-section">
-  <h1>DOPE TEAM</h1>
-  <p>Some text about who we are and what we do.</p>
+  <h1><b>DOPE TEAM</b></h1>
+  <p><i>A group of 3 students from VIT VELLORE currently pursuing our Btech and coming from different backgrounds with special skill set through which we achieved our first ever product DopeMeal.
+With the amalgamation of our special skills in coding, web designing, logical thinking we came up with the easy to maintain health and get the right meal especially curated for your needs with our DopeMeal</i></p>
 </div>
-
-
-
+<!--
+<br><br><br>
+<h1 style="text-align:center;"><b>DOPE TEAM</b></h1>
+<br><br>-->
 <div class="conatiner">
 <div class="wrap">
   
@@ -74,7 +78,7 @@
     <div class="date">
       <h4 style="color:#000000;"><b>CREATIVE HEAD</b></h4>
     </div>
-    <a href="#"><h1>ISHITA AGARWAL</h1></a>
+    <a href="https://www.linkedin.com/in/ishita-agarwal-b3b956188"><h1>ISHITA AGARWAL</h1></a>
     <!--<div class="poster p2">
       <h4>I</h4>
     </div>-->
@@ -84,7 +88,7 @@
     <div class="date">
       <h4 style="color:#000000;"><b>BACKEND DEVELOPER</b></h4>
     </div>
-    <a href="#"><H1>SATHYA PRAKASH RAI </H1></a>
+    <a href="https://www.linkedin.com/in/sathya-prakash-rai-s-978824153/"><H1>SATHYA PRAKASH RAI </H1></a>
     <!--<div class="poster p3">
       <h4>S</h4>
     </div>-->
@@ -153,8 +157,10 @@
     margin-top:3%;
     padding: 50px;
     text-align: center;
-    background-color: #000000;
-    color: white;
+    /*background-color: #000000;*/
+    background:none;
+    color: black;
+    font-size:90%;
    }
   @media (max-width: 1199.98px)
   {
@@ -167,9 +173,34 @@
     margin-top:9%;
     padding: 50px;
     text-align: center;
-    background-color: #000000;
-    color: white;
+    /*background-color: #000000;*/
+    background:none;
+    color: black;
    }
+   .three {
+  background: url({% static "images/kavin.jpeg"%});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom:10%;
+}
+.box {
+  margin: 10px;
+  width: 300px;
+  height: 490px;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+          box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.box:hover {
+  margin-bottom: -10px;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.7);
+          box-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
   }
 
 
@@ -265,6 +296,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
 }
 
 .five {

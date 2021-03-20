@@ -57,6 +57,9 @@
 </nav>
 </nav>
 <!--NAV BAR-->
+<div class="missing">
+  <h1 style="text-align:center;font-size:120%;"><b>THE FOOD YOU ASKED FOR AINT IN OUR DATABASE, IT WOULD BE NICE IF YOU DROP THE FOOD NAME BELOW :)</b></h1>
+</div>
 <div class="comment">
 <form action="food_request/">{% csrf_token %}
 <div class="input-group ">
@@ -106,29 +109,33 @@
 <style>
 body
 {
-  background-color:#FFFFFF;
+  background-image: url('{% static 'images/calnone.jpg'%}');
+    background-size:auto;
 }
 .comment
    {
     width:70%;
-    margin-top:20%;
+    /*margin-top:20%;*/
     margin-left:15%;
-    margin-bottom:3%;
+    /*margin-bottom:3%;*/
    }
-   .comment2
+  
+   .missing
    {
-    width:70%;
-    margin-left:15%;
-    margin-bottom:8%;
+    margin-top:20%;
    }
    @media (max-width: 1199.98px)
    {
     .comment
    {
-    margin-top:70%;
+    /*margin-top:70%;*/
     width:70%;
     margin-left:15%;
     margin-bottom:10%;
+   }
+   .missing
+   {
+    margin-top:50%;
    }
    }
 </style>

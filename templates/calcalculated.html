@@ -57,7 +57,7 @@
 </nav>
 </nav>
 <!--NAV BAR-->
-<div class="title"><h1 class="texter"><b>BEST RESULTS FOR "{{n}}"</b></h1></div>
+<div class="title"><h1 class="texter" style="color:#FFFFFF;"><b>BEST RESULTS FOR "{{n}}"</b></h1></div>
 {% for i in obj %}
 	<div class="card">
 	<img src="{{i.img.url}}" class="image" alt="not found">
@@ -101,7 +101,9 @@
 <style>
 body
 {
-    background-color:#FFFFFF;
+    /*background-color:#FFFFFF;*/
+    background-image: url('{% static 'images/calcu.jpg'%}');
+    background-size:auto;
 }
 .card
 {
