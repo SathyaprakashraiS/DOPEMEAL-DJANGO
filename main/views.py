@@ -12,6 +12,7 @@ from .models import foodrequest
 from .models import shopper
 from .models import Book
 from .forms import ContactForm
+from itertools import chain
 import speech_recognition as sr
 import pyttsx3
 import wolframalpha
@@ -128,21 +129,51 @@ def schemeselection(request):
 			if(b>25):
 				if(partedcalo<300):
 					obj =Food.objects.all().filter(calories__lte=partedcalo)
-					return render(request,"fooddisplaycheck.html",{'obj':obj,'meal':m,'c':c,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
+					pal=Paleo.objects.all().filter(calories__lte=partedcalo)
+					veg=Vegetarian.objects.all().filter(calories__lte=partedcalo)
+					vag=Vegan.objects.all().filter(calories__lte=partedcalo)
+					ket=Ketogenic.objects.all().filter(calories__lte=partedcalo)
+					med=Mediterranean.objects.all().filter(calories__lte=partedcalo)
+					result=list(chain(obj,pal,veg,vag,ket,med))
+					return render(request,"fooddisplaycheck.html",{'result':result,'pal':pal,'veg':veg,'vag':vag,'ket':ket,'med':med,'meal':m,'c':c,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
 					#return render(request,"fooddisplaycheck.html",{'obj':obj,'meal':m,'BOOLVALUEPASSED':choice})
 				else:
 					obj =Food.objects.all().filter(calories__lte=partedcalo,fat__lte=ofatav)
-					return render(request,"fooddisplaycheck.html",{'obj':obj,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
+					pal=Paleo.objects.all().filter(calories__lte=partedcalo,fat__lte=ofatav)
+					veg=Vegetarian.objects.all().filter(calories__lte=partedcalo,fat__lte=ofatav)
+					vag=Vegan.objects.all().filter(calories__lte=partedcalo,fat__lte=ofatav)
+					ket=Ketogenic.objects.all().filter(calories__lte=partedcalo,fat__lte=ofatav)
+					med=Mediterranean.objects.all().filter(calories__lte=partedcalo,fat__lte=ofatav)
+					result=list(chain(obj,pal,veg,vag,ket,med))
+					return render(request,"fooddisplaycheck.html",{'obj':result,'pal':pal,'veg':veg,'vag':vag,'ket':ket,'med':med,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
 			if(b<18.5):
 				if(partedcalo<300):
 					obj =Food.objects.all().filter(calories__lte=partedcalo)
-					return render(request,"fooddisplaycheck.html",{'obj':obj,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
+					pal=Paleo.objects.all().filter(calories__lte=partedcalo)
+					veg=Vegetarian.objects.all().filter(calories__lte=partedcalo)
+					vag=Vegan.objects.all().filter(calories__lte=partedcalo)
+					ket=Ketogenic.objects.all().filter(calories__lte=partedcalo)
+					med=Mediterranean.objects.all().filter(calories__lte=partedcalo)
+					result=list(chain(obj,pal,veg,vag,ket,med))
+					return render(request,"fooddisplaycheck.html",{'obj':result,'pal':pal,'veg':veg,'vag':vag,'ket':ket,'med':med,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
 				else:
 					obj =Food.objects.all().filter(calories__lte=partedcalo,fat__gte=ufatav)
-					return render(request,"fooddisplaycheck.html",{'obj':obj,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
+					pal=Paleo.objects.all().filter(calories__lte=partedcalo,fat__gte=ufatav)
+					veg=Vegetarian.objects.all().filter(calories__lte=partedcalo,fat__gte=ufatav)
+					vag=Vegan.objects.all().filter(calories__lte=partedcalo,fat__gte=ufatav).filter(calories__lte=partedcalo,fat__gte=ufatav).filter(calories__lte=partedcalo,fat__gte=ufatav)
+					ket=Ketogenic.objects.all().filter(calories__lte=partedcalo,fat__gte=ufatav).filter(calories__lte=partedcalo,fat__gte=ufatav)
+					med=Mediterranean.objects.all().filter(calories__lte=partedcalo,fat__gte=ufatav)
+					result=list(chain(obj,pal,veg,vag,ket,med))
+					return render(request,"fooddisplaycheck.html",{'obj':result,'pal':pal,'veg':veg,'vag':vag,'ket':ket,'med':med,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
 			if(b>=18.5 and b<=25):
 				obj =Food.objects.all().filter(calories__lte=partedcalo)
-				return render(request,"fooddisplaycheck.html",{'obj':obj,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
+				pal=Paleo.objects.all().filter(calories__lte=partedcalo)
+				veg=Vegetarian.objects.all().filter(calories__lte=partedcalo)
+				vag=Vegan.objects.all().filter(calories__lte=partedcalo)
+				ket=Ketogenic.objects.all().filter(calories__lte=partedcalo)
+				med=Mediterranean.objects.all().filter(calories__lte=partedcalo)
+				result=list(chain(obj,pal,veg,vag,ket,med))
+				return render(request,"fooddisplaycheck.html",{'obj':result,'pal':pal,'veg':veg,'vag':vag,'ket':ket,'med':med,'meal':m,'banswer':banswer,'lanswer':lanswer,'sanswer':sanswer,'danswer':danswer})
 	
 		if(finder==2):
 			if(b>25):
