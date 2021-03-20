@@ -7,7 +7,7 @@ class Food(models.Model):#anything is Food
 	carbohydrates=models.FloatField()
 	protiens=models.FloatField()
 	fat=models.FloatField()
-	img=models.ImageField(upload_to='images', default='static/images/DIET3.jpg')
+	img=models.ImageField(upload_to='images', default='images/DIET3.jpg')
 
 class Paleo(models.Model):
 	name=models.CharField(max_length=150)
@@ -15,7 +15,7 @@ class Paleo(models.Model):
 	carbohydrates=models.FloatField()
 	protiens=models.FloatField()
 	fat=models.FloatField()
-	img=models.ImageField(upload_to='images',default='static/images/DIET3.jpg')
+	img=models.ImageField(upload_to='images',default='images/DIET3.jpg')
 
 class Vegetarian(models.Model):
 	name=models.CharField(max_length=150)
@@ -31,7 +31,7 @@ class Vegan(models.Model):
 	carbohydrates=models.FloatField()
 	protiens=models.FloatField()
 	fat=models.FloatField()
-	img=models.ImageField(upload_to='images' ,default='static/images/DIET3.jpg')
+	img=models.ImageField(upload_to='images' ,default='images/DIET3.jpg')
 
 class Ketogenic(models.Model):
 	name=models.CharField(max_length=150)
@@ -39,7 +39,7 @@ class Ketogenic(models.Model):
 	carbohydrates=models.FloatField()
 	protiens=models.FloatField()
 	fat=models.FloatField()
-	img=models.ImageField(upload_to='images', default='static/images/DIET3.jpg')
+	img=models.ImageField(upload_to='images', default='images/DIET3.jpg')
 
 class Mediterranean(models.Model):
 	name=models.CharField(max_length=150)
@@ -47,7 +47,7 @@ class Mediterranean(models.Model):
 	carbohydrates=models.FloatField()
 	protiens=models.FloatField()
 	fat=models.FloatField()
-	img=models.ImageField(upload_to='images', default='static/images/DIET3.jpg')
+	img=models.ImageField(upload_to='images', default='images/DIET3.jpg')
 
 
 class review(models.Model):
